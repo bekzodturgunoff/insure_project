@@ -43,6 +43,14 @@ nav ul {
   list-style: none;
 }
 
+button {
+  transition: transform 100ms ease-out;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
 .nav-links-btn {
   display: flex;
   align-items: center;
@@ -256,6 +264,11 @@ a {
   display: none;
 }
 
+.mobile-absolute-1,
+.mobile-absolute-2 {
+  display: none;
+}
+
 @media (max-width: 1270px) {
   .hero-img-mobile {
     display: block;
@@ -389,6 +402,36 @@ a {
   .info-item {
     width: 100%;
   }
+
+  .mobile-absolute-1,
+  .mobile-absolute-2 {
+    display: block;
+  }
+
+  .hero-text {
+    position: relative;
+  }
+
+  .hero-text h1 {
+    z-index: 1;
+  }
+
+  .hero-text button {
+    z-index: 1;
+  }
+
+  .mobile-absolute-1 {
+    position: absolute;
+    left: -1rem;
+    top: -2.2rem;
+  }
+
+  .mobile-absolute-2 {
+    position: absolute;
+    bottom: -12rem;
+    right: -1rem;
+  }
+
   span {
     display: none;
   }
